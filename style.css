@@ -1,11 +1,11 @@
 body {
-    background-color: #49B749;
+    background-color: #49B999;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 .todo-wrapper {
     margin-top: 50px;
-    background-color: #2f6;
+    background-color: #777;
     border-radius: 15px;
     margin-left: auto;
     margin-right: auto;
@@ -19,7 +19,7 @@ body {
 
 .todo-wrapper p {
     font-style: italic;
-    color: #666;
+    color: #222;
     margin: 5px 0;
 }
 
@@ -44,7 +44,7 @@ body {
 
 .todo-wrapper .completed {
     text-decoration: line-through;
-    color: #666;
+    color: #561;
 }
 
 .todo-wrapper .pretty-button {
@@ -79,8 +79,8 @@ body {
     justify-content: space-around;
 }
 
-.todo-wrapper #clear-button {
-    background-color: #49B749;
+.todo-wrapper #clear-completed-button {
+    background-color: #8B1D45;
 }
 
 .todo-wrapper #empty-button {
@@ -88,7 +88,11 @@ body {
 }
 
 .todo-wrapper #save-button {
-    background-color: #49B749;
+    background-color: #49B649;
+}
+
+.todo-wrapper #load-button {
+    background-color: #79B239;
 }
 
 @media only screen and (min-width: 1400px) {
