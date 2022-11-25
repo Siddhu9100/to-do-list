@@ -1,13 +1,23 @@
+
 //everything related to add button 
 
 var addButton = document.getElementById("add-button");
-
-addButton.addEventListener("click", addToDoItem);
-
+var clearCompleted = document.getElementById("clear-completed-button");
+var emptyList = document.getElementById("empty-button");
+var saveList = document.getElementById("save-button");
 
 var toDoEntryBox = document.getElementById("todo-entry-box");
 var toDoList = document.getElementById("todo-list");
 
+
+  addButton.addEventListener("click", addToDoItem);
+  clearCompleted.addEventListener("click",clearCompletedToDoItems);
+  emptyList.addEventListener("click",emptyToDoList);
+  saveList.addEventListener("click",saveToDoList);
+  
+  
+  
+  
   function newToDoItem(itemText, completed) 
     {
     var toDoItem = document.createElement("li");
@@ -38,26 +48,31 @@ var toDoList = document.getElementById("todo-list");
     }
     }
 
-// everything related to clear completed button
+// everything related to removing items
 
-var clearCompletedButton = document.getElementById("clear-completed-button");
-
-clearCompletedButton.addEventListener("click",clearCompletedItems);
-
-  function clearCompletedItems()
+  function clearCompletedToDoItems()
     {
-      var CompletedItems = toDoList.getElementByClassName("completed");
+      var completedItems = toDoList.getElementsByClassName("completed");
      
-     while (completedItems.length>0)
-     {
+      while (completedItems.length>0){
        
        completedItems.item(0).remove();
        
-     }
+       }
       
     }
 
-
+  function emptyToDoList(){
+    
+    var toDoItems = toDoList.children;
+    
+    while (toDoItems.length>0){
+      
+     toDoItems.item(0).remove();
+      
+    }
+    
+  }
 
 
 
