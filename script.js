@@ -3,7 +3,7 @@ var addButton = document.getElementById("add-button");
 var clearCompleted = document.getElementById("clear-completed-button");
 var emptyList = document.getElementById("empty-button");
 var saveList = document.getElementById("save-button");
-
+var loadListButton = document.getElementBYId("load-button")
 var toDoEntryBox = document.getElementById("todo-entry-box");
 var toDoList = document.getElementById("todo-list");
 
@@ -12,7 +12,7 @@ var toDoList = document.getElementById("todo-list");
   clearCompleted.addEventListener("click",clearCompletedToDoItems);
   emptyList.addEventListener("click",emptyToDoList);
   saveList.addEventListener("click",saveToDoList);
-  
+  loadListButton.addEventListener("click",loadList);
   
   
   
